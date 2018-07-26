@@ -44,20 +44,20 @@ public class TennisGame1 implements TennisGame {
     }
 
     private String getScoreForAdvantageOrWin() {
-        int scoreDifference = m_score1-m_score2;
+        int scoreDifference = m_score1 - m_score2;
 
-        if (scoreDifference==1) return "Advantage " + player1Name;
-        else if (scoreDifference ==-1) return "Advantage " + player2Name;
-        else if (scoreDifference>=2) return "Win for " + player1Name;
+        if (scoreDifference == 1) return "Advantage " + player1Name;
+        else if (scoreDifference == -1) return "Advantage " + player2Name;
+        else if (scoreDifference >= 2) return "Win for " + player1Name;
 
         return "Win for " + player2Name;
     }
 
     private boolean areAtAdvantageOrHaveWon() {
-        return m_score1>=4 || m_score2>=4;
+        return m_score1 >= 4 || m_score2 >= 4;
     }
 
     private boolean areDrawing() {
-        return m_score1==m_score2;
+        return m_score1 == m_score2;
     }
 }
