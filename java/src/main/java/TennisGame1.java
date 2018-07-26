@@ -30,22 +30,11 @@ public class TennisGame1 implements TennisGame {
         String score = "";
         if (areDrawing())
         {
-            switch (m_score1)
-            {
-                case 0:
-                        score = tennisScoreLookup.get(m_score1) + "-All";
-                    break;
-                case 1:
-                        score = tennisScoreLookup.get(m_score1) + "-All";
-                    break;
-                case 2:
-                        score = tennisScoreLookup.get(m_score1) + "-All";
-                    break;
-                default:
-                        score = "Deuce";
-                    break;
-                
+            if (m_score1 > 2) {
+                return "Deuce";
             }
+
+            return tennisScoreLookup.get(m_score1) + "-All";
         }
         else if (areAtAdvantageOrHaveWon())
         {
