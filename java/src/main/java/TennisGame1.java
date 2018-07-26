@@ -44,15 +44,13 @@ public class TennisGame1 implements TennisGame {
     }
 
     private String getScoreForAdvantageOrWin() {
-        String score;
-        int minusResult = m_score1-m_score2;
+        int scoreDifference = m_score1-m_score2;
 
-        if (minusResult==1) score ="Advantage " + player1Name;
-        else if (minusResult ==-1) score ="Advantage " + player2Name;
-        else if (minusResult>=2) score = "Win for " + player1Name;
-        else score ="Win for " + player2Name;
+        if (scoreDifference==1) return "Advantage " + player1Name;
+        else if (scoreDifference ==-1) return "Advantage " + player2Name;
+        else if (scoreDifference>=2) return "Win for " + player1Name;
 
-        return score;
+        return "Win for " + player2Name;
     }
 
     private boolean areAtAdvantageOrHaveWon() {
