@@ -46,10 +46,7 @@ public class TennisGame1 implements TennisGame {
         }
         else
         {
-            score += tennisScoreLookup.get(m_score1);
-            score += "-";
-            score += tennisScoreLookup.get(m_score2);
-
+            return tennisScoreLookup.get(m_score1) + "-" + tennisScoreLookup.get(m_score2);
         }
 
         return score;
