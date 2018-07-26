@@ -21,7 +21,7 @@ public class TennisGame1 implements TennisGame {
     public String getScore() {
         String score = "";
         int tempScore=0;
-        if (m_score1==m_score2)
+        if (areDrawing())
         {
             switch (m_score1)
             {
@@ -40,7 +40,7 @@ public class TennisGame1 implements TennisGame {
                 
             }
         }
-        else if (m_score1>=4 || m_score2>=4)
+        else if (areAtAdvantageOrHaveWon())
         {
             int minusResult = m_score1-m_score2;
             if (minusResult==1) score ="Advantage " + player1Name;
@@ -72,5 +72,13 @@ public class TennisGame1 implements TennisGame {
             }
         }
         return score;
+    }
+
+    private boolean areAtAdvantageOrHaveWon() {
+        return m_score1>=4 || m_score2>=4;
+    }
+
+    private boolean areDrawing() {
+        return m_score1==m_score2;
     }
 }
