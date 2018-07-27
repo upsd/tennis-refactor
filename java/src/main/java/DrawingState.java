@@ -1,5 +1,6 @@
 public class DrawingState implements GameState {
 
+    private static final int THIRTY = 2;
     private int score;
     private final TennisTermTranslator translator;
 
@@ -9,7 +10,7 @@ public class DrawingState implements GameState {
     }
 
     public String getScore() {
-        if (score > 2) {
+        if (score > THIRTY) {
             return "Deuce";
         }
 

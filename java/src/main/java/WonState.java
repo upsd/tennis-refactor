@@ -1,5 +1,6 @@
 public class WonState implements GameState {
 
+    private static final String WIN_MESSAGE = "Win for ";
     private Player playerOne;
     private Player playerTwo;
 
@@ -10,9 +11,9 @@ public class WonState implements GameState {
 
     public String getScore() {
         if (playerOne.hasWonAgainst(playerTwo)) {
-            return "Win for " + playerOne.name();
+            return WIN_MESSAGE + playerOne.name();
         }
 
-        return "Win for " + playerTwo.name();
+        return WIN_MESSAGE + playerTwo.name();
     }
 }

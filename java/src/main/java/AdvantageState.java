@@ -1,5 +1,6 @@
 public class AdvantageState implements GameState {
 
+    private static final String ADVANTAGE_MESSAGE = "Advantage ";
     private Player playerOne;
     private Player playerTwo;
 
@@ -10,9 +11,9 @@ public class AdvantageState implements GameState {
 
     public String getScore() {
         if (playerOne.hasAdvantageOver(playerTwo)) {
-            return "Advantage " + playerOne.name();
+            return ADVANTAGE_MESSAGE + playerOne.name();
         }
 
-        return "Advantage " + playerTwo.name();
+        return ADVANTAGE_MESSAGE + playerTwo.name();
     }
 }
