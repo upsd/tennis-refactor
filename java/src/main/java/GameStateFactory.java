@@ -13,16 +13,24 @@ public class GameStateFactory {
         {
             return new DrawingState(playerOne.getScore());
         }
-        else if (areAtAdvantageOrHaveWon())
+        if (areAtAdvantage())
         {
-            return new AdvantageOrWonState(playerOne, playerTwo);
+            return new AdvantageState(playerOne, playerTwo);
+        }
+        if (playerHasWon())
+        {
+            return new WonState(playerOne, playerTwo);
         }
 
         return new UnderFortyAndNotDrawingState(playerOne, playerTwo);
     }
 
-    private boolean areAtAdvantageOrHaveWon() {
-        return playerOne.getScore() >= 4 || playerTwo.getScore() >= 4;
+    private boolean playerHasWon() {
+        return playerOne.hasWonAgainst(playerTwo) || playerTwo.hasWonAgainst(playerOne);
+    }
+
+    private boolean areAtAdvantage() {
+        return playerOne.hasAdvantageOver(playerTwo) || playerTwo.hasAdvantageOver(playerOne);
     }
 
     private boolean areDrawing() {
