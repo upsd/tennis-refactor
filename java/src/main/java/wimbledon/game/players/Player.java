@@ -2,6 +2,10 @@ package wimbledon.game.players;
 
 public class Player {
 
+    public static final int A_POINT = 1;
+    public static final int WINNING_BY_ONE_POINT = 1;
+    public static final int WINNING_BY_TWO_POINTS = 2;
+    public static final int GAME = 4;
     private String name;
     private int score = 0;
 
@@ -14,7 +18,7 @@ public class Player {
     }
 
     public void scorePoint() {
-        score += 1;
+        score += A_POINT;
     }
 
     public int getScore() {
@@ -26,11 +30,11 @@ public class Player {
     }
 
     public boolean hasWonAgainst(Player opponent) {
-        return this.score >= 4 && getScoreDifference(opponent) >= 2;
+        return this.score >= GAME && getScoreDifference(opponent) >= WINNING_BY_TWO_POINTS;
     }
 
     public boolean hasAdvantageOver(Player opponent) {
-        return this.score >= 4 && getScoreDifference(opponent) == 1;
+        return this.score >= GAME && getScoreDifference(opponent) == WINNING_BY_ONE_POINT;
     }
 
     private int getScoreDifference(Player opponent) {
