@@ -1,6 +1,7 @@
 package wimbledon.game.states;
 
 import wimbledon.game.players.Player;
+import wimbledon.game.translator.TennisTermTranslator;
 
 public class GameStateFactory {
 
@@ -15,7 +16,7 @@ public class GameStateFactory {
     public GameState getState() {
         if (areDrawing())
         {
-            return new DrawingState(playerOne.getScore());
+            return new DrawingState(playerOne.getScore(), new TennisTermTranslator());
         }
         if (areAtAdvantage())
         {
