@@ -1,13 +1,10 @@
-import com.sun.java.accessibility.util.Translator;
 import org.junit.jupiter.api.Test;
 import wimbledon.game.states.DrawingState;
 import wimbledon.game.translator.TennisTermTranslator;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class DrawingStateShould {
@@ -31,7 +28,6 @@ public class DrawingStateShould {
 
         String score = state.getScore();
 
-        verify(translator).fromScore(0);
         assertThat(score, is("Love-All"));
     }
 }

@@ -6,7 +6,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class AdvantageStateShould {
@@ -21,7 +20,6 @@ public class AdvantageStateShould {
 
         String score = state.getScore();
 
-        verify(playerOne).hasAdvantageOver(any());
         assertThat(score, is("Advantage reginald"));
     }
 
@@ -36,7 +34,6 @@ public class AdvantageStateShould {
 
         String score = state.getScore();
 
-        verify(playerOne).hasAdvantageOver(any());
         assertThat(score, is("Advantage chris"));
     }
 }

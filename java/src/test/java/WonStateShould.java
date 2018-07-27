@@ -5,7 +5,8 @@ import wimbledon.game.states.WonState;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class WonStateShould {
 
@@ -19,7 +20,6 @@ public class WonStateShould {
 
         String score = state.getScore();
 
-        verify(playerOne).hasWonAgainst(any());
         assertThat(score, is("Win for reginald"));
     }
 
@@ -34,8 +34,6 @@ public class WonStateShould {
 
         String score = state.getScore();
 
-        verify(playerOne).hasWonAgainst(any());
         assertThat(score, is("Win for chris"));
-
     }
 }
