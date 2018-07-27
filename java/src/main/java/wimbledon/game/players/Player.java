@@ -1,3 +1,5 @@
+package wimbledon.game.players;
+
 public class Player {
 
     private String name;

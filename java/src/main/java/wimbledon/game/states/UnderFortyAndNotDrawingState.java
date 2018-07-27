@@ -1,3 +1,8 @@
+package wimbledon.game.states;
+
+import wimbledon.game.players.Player;
+import wimbledon.game.translater.TennisTermTranslator;
+
 public class UnderFortyAndNotDrawingState implements GameState {
 
     private Player playerOne;

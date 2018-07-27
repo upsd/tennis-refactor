@@ -1,3 +1,7 @@
+package wimbledon.game.states;
+
+import wimbledon.game.players.Player;
+
 public class GameStateFactory {
 
     private Player playerOne;

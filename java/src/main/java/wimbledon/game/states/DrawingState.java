@@ -1,3 +1,7 @@
+package wimbledon.game.states;
+
+import wimbledon.game.translater.TennisTermTranslator;
+
 public class DrawingState implements GameState {
 
     private static final int THIRTY = 2;

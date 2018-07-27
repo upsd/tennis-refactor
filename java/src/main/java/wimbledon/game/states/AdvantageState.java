@@ -1,3 +1,7 @@
+package wimbledon.game.states;
+
+import wimbledon.game.players.Player;
+
 public class AdvantageState implements GameState {
 
     private static final String ADVANTAGE_MESSAGE = "Advantage ";

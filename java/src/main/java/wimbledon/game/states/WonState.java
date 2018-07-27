@@ -1,3 +1,7 @@
+package wimbledon.game.states;
+
+import wimbledon.game.players.Player;
+
 public class WonState implements GameState {
 
     private static final String WIN_MESSAGE = "Win for ";

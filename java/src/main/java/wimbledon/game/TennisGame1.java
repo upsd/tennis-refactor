@@ -1,3 +1,9 @@
+package wimbledon.game;
+
+import wimbledon.game.players.Player;
+import wimbledon.game.states.GameState;
+import wimbledon.game.states.GameStateFactory;
+
 public class TennisGame1 implements TennisGame {
     
     private final Player playerOne;
