@@ -1,4 +1,4 @@
-package wimbledon.game.translater;
+package wimbledon.game.translator;
 
 import java.util.HashMap;
 import java.util.Map;

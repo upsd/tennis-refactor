@@ -1,6 +1,6 @@
 package wimbledon.game.states;
 
-import wimbledon.game.translater.TennisTermTranslator;
+import wimbledon.game.translator.TennisTermTranslator;
 
 public class DrawingState implements GameState {
 
