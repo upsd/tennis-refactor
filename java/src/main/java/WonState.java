@@ -1,4 +1,5 @@
 public class WonState implements GameState {
+
     private Player playerOne;
     private Player playerTwo;
 
