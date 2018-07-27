@@ -23,14 +23,14 @@ public class Player {
     }
 
     public boolean hasWonAgainst(Player opponent) {
-        int scoreDifference = this.getScore() - opponent.getScore();
-
-        return this.score >= 4 && scoreDifference >= 2;
+        return this.score >= 4 && getScoreDifference(opponent) >= 2;
     }
 
     public boolean hasAdvantageOver(Player opponent) {
-        int scoreDifference = this.getScore() - opponent.getScore();
+        return this.score >= 4 && getScoreDifference(opponent) == 1;
+    }
 
-        return this.score >= 4 && scoreDifference == 1;
+    private int getScoreDifference(Player opponent) {
+        return this.getScore() - opponent.getScore();
     }
 }
