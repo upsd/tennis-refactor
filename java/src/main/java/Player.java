@@ -17,4 +17,8 @@ public class Player {
     public int getScore() {
         return this.score;
     }
+
+    public boolean isDrawingWith(Player otherPlayer) {
+        return this.getScore() == otherPlayer.getScore();
+    }
 }

@@ -26,6 +26,6 @@ public class GameStateFactory {
     }
 
     private boolean areDrawing() {
-        return playerOne.getScore() == playerTwo.getScore();
+        return playerOne.isDrawingWith(playerTwo);
     }
 }
