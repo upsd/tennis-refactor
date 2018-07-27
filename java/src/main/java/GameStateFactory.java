@@ -11,7 +11,7 @@ public class GameStateFactory {
     public GameState getState() {
         if (areDrawing())
         {
-            return new DrawingState(playerOne, playerTwo);
+            return new DrawingState(playerOne.getScore());
         }
         else if (areAtAdvantageOrHaveWon())
         {
