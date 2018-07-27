@@ -27,7 +27,7 @@ public class GameStateFactory {
             return new WonState(playerOne, playerTwo);
         }
 
-        return new UnderFortyAndNotDrawingState(playerOne, playerTwo);
+        return new UnderFortyAndNotDrawingState(playerOne, playerTwo, new TennisTermTranslator());
     }
 
     private boolean playerHasWon() {

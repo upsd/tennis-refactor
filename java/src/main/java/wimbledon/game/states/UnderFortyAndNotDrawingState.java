@@ -9,10 +9,10 @@ public class UnderFortyAndNotDrawingState implements GameState {
     private Player playerTwo;
     private final TennisTermTranslator translator;
 
-    public UnderFortyAndNotDrawingState(Player playerOne, Player playerTwo) {
+    public UnderFortyAndNotDrawingState(Player playerOne, Player playerTwo, TennisTermTranslator translator) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
-        this.translator = new TennisTermTranslator();
+        this.translator = translator;
     }
 
     public String getScore() {
