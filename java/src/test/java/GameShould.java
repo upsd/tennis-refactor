@@ -13,13 +13,13 @@ import wimbledon.game.TennisGame2;
 import wimbledon.game.TennisGame3;
 
 @RunWith(Parameterized.class)
-public class TennisTest {
+public class GameShould {
 
     private int player1Score;
     private int player2Score;
     private String expectedScore;
 
-    public TennisTest(int player1Score, int player2Score, String expectedScore) {
+    public GameShould(int player1Score, int player2Score, String expectedScore) {
         this.player1Score = player1Score;
         this.player2Score = player2Score;
         this.expectedScore = expectedScore;
